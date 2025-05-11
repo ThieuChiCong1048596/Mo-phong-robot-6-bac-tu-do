@@ -41,7 +41,7 @@ Phù hợp cho: Nghiên cứu học thuật, phát triển ứng dụng robot, v
 
 ## Cài Đặt
 
-1. Cài Đặt ROS Noetic
+1. **Cài Đặt ROS Noetic**
 
 Vui lòng tham khảo hướng dẫn chính thức tại:👉 https://wiki.ros.org/noetic/Installation/Ubuntu
 
