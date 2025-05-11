@@ -160,15 +160,13 @@ Mo-phong-robot-6-bac-tu-do/
 | Object Detection   | Phát hiện vật thể qua xử lý ảnh     |
 | End-Effector Track | Theo dõi vị trí và hiệu chỉnh       |
 
-## Lưu Ý
+## Lưu ý
 
 * MATLAB và ROS master cần cùng mạng LAN hoặc chạy `localhost`
 * Khởi động mô phỏng theo thứ tự: Gazebo → ROS nodes → MATLAB GUI
 * Một số lỗi thường gặp:
 
-  * `failed_pick_in_progress`: Kiểm tra `/ik_solver_status` với `rostopic echo`
-  * Gazebo chậm: Tăng RAM hoặc giảm mô hình
-  * GUI không phản hồi: Kiểm tra kết nối ROS (`rosnode list`)
+
 
 ## Tác Giả
 
