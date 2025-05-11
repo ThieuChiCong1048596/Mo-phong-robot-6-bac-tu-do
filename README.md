@@ -143,7 +143,7 @@ Mo-phong-robot-6-bac-tu-do/
 
 ## Tài Liệu & Thiết Kế
 
-* File SolidWorks 3D (Giải nén trên Desktop): [Tải tại đây](https://drive.google.com/uc?id=<YOUR_SOLIDWORKS_FILE_ID>&export=download)
+* File SolidWorks 3D (Giải nén trên Desktop, yêu cầu bản SolidWorks từ 2022 trở lên): (https://drive.google.com/drive/folders/10BUfy0PVBtMiwYveavlsReMv1TZBFfdv?usp=drive_link)
 * GUI Executable (.exe): có trong .zip
 
 ## Thuật Toán
