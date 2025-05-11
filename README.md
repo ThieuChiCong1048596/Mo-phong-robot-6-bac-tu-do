@@ -29,15 +29,15 @@ Phù hợp cho: Nghiên cứu học thuật, phát triển ứng dụng robot, v
 
 ## Yêu Cầu Hệ Thống
 
-| Thành phần            | Phiên bản hoặc mô tả                                       |
-| --------------------- | ---------------------------------------------------------- |
-| Hệ điều hành          | Ubuntu 20.04 (Focal Fossa)                                 |
-| ROS                   | Noetic Ninjemys                                            |
-| MoveIt                | 1.1.9                                                      |
-| Gazebo                | 11.x                                                       |
-| MATLAB                | R2024a+ với ROS Toolbox                                    |
-| Phần mềm bổ sung      | Git, Python 3.8+, Catkin tools                             |
-| Phần cứng khuyến nghị | RAM ≥ 8GB (tốt nhất 16GB), CPU ≥ 4 nhân, GPU hỗ trợ OpenGL |
+| Thành phần            | Phiên bản hoặc mô tả                                        |
+| --------------------- | ----------------------------------------------------------  |
+| Hệ điều hành          | Window 10/11 cho Matlab, Ubuntu 20.04 (Focal Fossa) cho ROS |
+| ROS                   | Noetic Ninjemys                                             |
+| MoveIt                | 1.1.9                                                       |
+| Gazebo                | 11.x                                                        |
+| MATLAB                | R2024a+ với ROS Toolbox                                     |
+| Phần mềm bổ sung      | Git, Python 3.8+, Catkin tools                              |
+| Phần cứng khuyến nghị | RAM ≥ 8GB (tốt nhất 16GB), CPU ≥ 4 nhân, GPU hỗ trợ OpenGL  |
 
 ## Cài Đặt
 
