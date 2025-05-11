@@ -41,16 +41,11 @@ Phù hợp cho: Nghiên cứu học thuật, phát triển ứng dụng robot, v
 
 ## Cài Đặt
 
-1. **Cài ROS Noetic**
+1. Cài Đặt ROS Noetic
 
-```bash
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu focal main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-sudo apt update
-sudo apt install ros-noetic-desktop-full
-echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-```
+Vui lòng tham khảo hướng dẫn chính thức tại:👉 https://wiki.ros.org/noetic/Installation/Ubuntu
+
+Hoặc xem hướng dẫn chi tiết bằng tiếng Việt tại:👉 https://robodev.blog/cai-dat-ros-noetic
 
 2. **Cài MoveIt**
 
@@ -148,8 +143,8 @@ Mo-phong-robot-6-bac-tu-do/
 
 ## Tài Liệu & Thiết Kế
 
-* File SolidWorks 3D: [Tải tại đây](https://drive.google.com/uc?id=<YOUR_SOLIDWORKS_FILE_ID>&export=download)
-* GUI Executable (.exe): [Tải tại đây](https://drive.google.com/uc?id=<YOUR_EXE_FILE_ID>&export=download)
+* File SolidWorks 3D (Giải nén trên Desktop): [Tải tại đây](https://drive.google.com/uc?id=<YOUR_SOLIDWORKS_FILE_ID>&export=download)
+* GUI Executable (.exe): có trong .zip
 
 ## Thuật Toán
 
