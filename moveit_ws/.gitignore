@@ -1,0 +1,9 @@
+/moveit_ws/build/
+/moveit_ws/devel/
+/moveit_ws/logs/
+*.log
+*.bag
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

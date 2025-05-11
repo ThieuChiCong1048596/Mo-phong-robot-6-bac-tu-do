@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="moveit_ar2_sim" type="IK_solver.py" name="ik_solver" output="screen"/>
+  <node pkg="moveit_ar2_sim" type="Cartesian_path.py" name="cartesian_path" output="screen"/>
+  <node pkg="moveit_ar2_sim" type="node_spawn_box_models_in_gazebo.py" name="spawn_boxes" output="screen"/>
+  <node pkg="moveit_ar2_sim" type="Detectobject.py" name="detect_object" output="screen"/>
+  <node pkg="moveit_ar2_sim" type="Calibrate.py" name="calibrate" output="screen"/>
+</launch>
+

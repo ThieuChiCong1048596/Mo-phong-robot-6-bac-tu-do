@@ -1,0 +1,81 @@
+
+<launch>
+    <!-- Khởi động Gazebo và robot -->
+    <include file="$(find ar2_robot)/launch/ar2_urdf.launch" />
+
+    <!-- Khởi động MoveIt MoveGroup -->
+    <include file="$(find moveit_ar2_sim)/launch/move_group.launch" />
+
+    <!-- Chạy RViz (tùy chọn) -->
+    <arg name="use_rviz" default="true" />
+    <include file="$(find moveit_ar2_sim)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
+        <arg name="rviz_config" value="$(find moveit_ar2_sim)/launch/moveit.rviz"/>
+    </include>
+
+    <!-- Chờ Gazebo sẵn sàng -->
+    <test test-name="wait_for_gazebo" pkg="rostest" type="wait_for_gazebo.py" retry="3">
+        <param name="timeout" value="30" />
+    </test>
+
+    <!-- Chờ MoveIt sẵn sàng -->
+    <test test-name="wait_for_moveit" pkg="rostest" type="wait_for_moveit.py" retry="3">
+        <param name="timeout" value="30" />
+    </test>
+
+    <!-- Node 1: IK_solver -->
+    <group ns="ik_solver">
+        <node name="ik_solver" pkg="moveit_ar2_sim" type="IK_solver.py" output="log">
+            <param name="planner_id" value="RRTConnectkConfigDefault" />
+        </node>
+    </group>
+
+    <!-- Node 2: CameraAdjustNode -->
+    <group ns="camera_adjust">
+        <node name="camera_adjust_node" pkg="moveit_ar2_sim" type="Calibrate.py" output="log">
+            <param name="image_width" value="640" />
+            <param name="image_height" value="480" />
+            <param name="rect_width" value="100" />
+            <param name="rect_height" value="100" />
+            <param name="center_tolerance" value="50" />
+            <param name="pixel_to_meter" value="0.001" />
+            <param name="max_adjust_distance" value="0.005" />
+            <param name="height_scale" value="0.5" />
+            <param name="min_lift_height" value="0.1" />
+            <param name="base_height" value="0.0" />
+        </node>
+    </group>
+
+    <!-- Node 3: CameraObjectNode -->
+    <group ns="camera_object">
+        <node name="camera_object_node" pkg="moveit_ar2_sim" type="Detectobject.py" output="log">
+            <param name="image_width" value="640" />
+            <param name="image_height" value="480" />
+            <param name="rect_width" value="100" />
+            <param name="rect_height" value="100" />
+            <param name="min_area" value="50" />
+            <param name="margin" value="10" />
+            <param name="plane_z" value="0.015" />
+            <param name="focal_length" value="554.256" />
+            <param name="lower_green" value="[30, 50, 50]" />
+            <param name="upper_green" value="[90, 255, 255]" />
+            <param name="lower_blue" value="[90, 60, 60]" />
+            <param name="upper_blue" value="[150, 255, 255]" />
+            <param name="no_object_threshold" value="30" />
+            <param name="processing_timeout" value="3.0" />
+        </node>
+    </group>
+
+    <!-- Node 4: UltimateRobotController -->
+    <group ns="controller">
+        <node name="ultimate_robot_controller" pkg="moveit_ar2_sim" type="Cartesian_path.py" output="log">
+            <param name="current_speed" value="0.1" />
+            <param name="max_pose_distance" value="0.3" />
+            <param name="max_attempts" value="5" />
+            <param name="timeout" value="10.0" />
+            <param name="roll" value="-1.5708" />
+            <param name="pitch" value="3.1416" />
+            <param name="yaw" value="0.0" />
+        </node>
+    </group>
+</launch>
+
