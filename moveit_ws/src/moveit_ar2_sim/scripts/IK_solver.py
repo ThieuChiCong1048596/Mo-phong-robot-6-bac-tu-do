@@ -73,8 +73,8 @@ def move_robot_callback(msg):
                       msg.position.x, msg.position.y, msg.position.z)
         return
 
-    arm_group.set_goal_position_tolerance(0.05)  # 5cm
-    arm_group.set_goal_orientation_tolerance(0.05)  # ~2.9 độ
+    arm_group.set_goal_position_tolerance(0.001)  
+    arm_group.set_goal_orientation_tolerance(0.01)  
 
     rospy.loginfo("Nhận tọa độ mới từ MATLAB: X=%.3f, Y=%.3f, Z=%.3f",
                   msg.position.x, msg.position.y, msg.position.z)
