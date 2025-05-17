@@ -20,14 +20,19 @@ Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậ
 * Điều khiển đầu cuối: Theo dõi và điều chỉnh End-Effector (`EE_tracker.py`, `node_set_predefined_pose.py`)
 * Thiết kế 3D: Mô hình SolidWorks đầy đủ
 
+<h1 align="center">Mô phỏng Robot 6 Bậc Tự Do</h1>
 
-![Demo GUI](https://drive.google.com/uc?export=view&id=1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx)
+<h2 align="center">📸 Demo</h2>
+<p align="center">Hình ảnh minh họa GUI MATLAB và robot trong RViz</p>
 
-**             Mô hình Assembly trong file SolidWork** 
+<div align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx">
+</div>
+
 
 ![Demo GUI](https://drive.google.com/uc?export=view&id=1m1rPwmgqAXiJfKh5xN3QxK1OqHbtwVgE)
 
-**            Mô hình 3D mô phỏng trên Gazebo** 
+**Mô hình 3D mô phỏng trên Gazebo** 
 
 ## Demo
 
