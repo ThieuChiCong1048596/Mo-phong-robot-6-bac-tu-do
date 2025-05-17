@@ -23,11 +23,11 @@ Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậ
 
 ![Demo GUI](https://drive.google.com/uc?export=view&id=1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx)
 
-**Mô hình Assembly trong file SolidWork** 
+**             Mô hình Assembly trong file SolidWork** 
 
 ![Demo GUI](https://drive.google.com/uc?export=view&id=1m1rPwmgqAXiJfKh5xN3QxK1OqHbtwVgE)
 
-**Mô hình 3D mô phỏng trên Gazebo** 
+**            Mô hình 3D mô phỏng trên Gazebo** 
 
 ## Demo
 
