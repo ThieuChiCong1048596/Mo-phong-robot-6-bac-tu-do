@@ -10,26 +10,31 @@ Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậ
 
 **Ý tưởng chính:** Xây dựng hệ thống mô phỏng robot 6 bậc tự do hoàn chỉnh, kết nối ROS ↔ MATLAB, xử lý hình ảnh từ cảm biến, và điều khiển linh hoạt qua GUI hoặc script Python.
 
-
-![Demo GUI](https://drive.google.com/uc?export=view&id=1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx)
-
-                            Mô hình 3D trong file SolidWork 
-Phù hợp cho: Nghiên cứu học thuật, phát triển ứng dụng robot, và giảng dạy.
-
-## Demo
-
-**Video mô phỏng** (Gazebo, MoveIt, GUI MATLAB):
-[https://youtube.com/](https://youtube.com/)...
-
 ## Tính Năng
 
-* Mô phỏng robot 6 bậc tự do: URDF + Gazebo với mô phỏng khớp chính xác
+* Mô phỏng robot 6 bậc tự do: chuyển file file Assembly của SolidWork sang file URDF + Gazebo(ROS) với mô phỏng các khớp chính xác
 * Lập kế hoạch chuyển động: MoveIt, điều khiển qua Python (`IK_solver.py`, `Cartesian_path.py`)
 * Giao diện MATLAB: Điều khiển trực quan qua GUI (`gui.mlapp`)
 * Phát hiện đối tượng: Xử lý ảnh với OpenCV (`Detectobject.py`)
 * Tương tác môi trường: Tạo vật thể trong Gazebo (`node_spawn_box_models_in_gazebo.py`)
 * Điều khiển đầu cuối: Theo dõi và điều chỉnh End-Effector (`EE_tracker.py`, `node_set_predefined_pose.py`)
 * Thiết kế 3D: Mô hình SolidWorks đầy đủ
+
+
+                                        ![Demo GUI](https://drive.google.com/uc?export=view&id=1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx)
+
+                                                                 **Mô hình Assembly trong file SolidWork** 
+
+                                       ![Demo GUI](https://drive.google.com/uc?export=view&id=1m1rPwmgqAXiJfKh5xN3QxK1OqHbtwVgE)
+
+                                                                **Mô hình 3D mô phỏng trên Gazebo** 
+
+## Demo
+
+**Video mô phỏng** (Gazebo, MoveIt, GUI MATLAB):
+[https://youtube.com/](https://youtube.com/)...
+
+
 
 ## Yêu Cầu Hệ Thống
 
