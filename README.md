@@ -20,16 +20,18 @@ Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậ
 * Điều khiển đầu cuối: Theo dõi và điều chỉnh End-Effector (`EE_tracker.py`, `node_set_predefined_pose.py`)
 * Thiết kế 3D: Mô hình SolidWorks đầy đủ
 
-<p align="center">Mô hình Assembly trên SolidWork/p>
+
 
 <div align="center">
   <img src="https://drive.google.com/uc?export=view&id=1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx">
+  <p align="center">Mô hình Assembly trên SolidWork>
 </div>
 
+<div align="center">
+  <img src="(https://drive.google.com/uc?export=view&id=1m1rPwmgqAXiJfKh5xN3QxK1OqHbtwVgE">
+  <p align="center">Mô hình 3D mô phỏng trên Gazebo>
+</div>
 
-![Demo GUI](https://drive.google.com/uc?export=view&id=1m1rPwmgqAXiJfKh5xN3QxK1OqHbtwVgE)
-
-**Mô hình 3D mô phỏng trên Gazebo** 
 
 ## Demo
 
