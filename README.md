@@ -19,7 +19,7 @@ Phù hợp cho: Nghiên cứu học thuật, phát triển ứng dụng robot, v
 
 ## Tính Năng
 
-* Mô phỏng robot AR2: URDF + Gazebo với mô phỏng khớp chính xác
+* Mô phỏng robot 6 bậc tự do: URDF + Gazebo với mô phỏng khớp chính xác
 * Lập kế hoạch chuyển động: MoveIt, điều khiển qua Python (`IK_solver.py`, `Cartesian_path.py`)
 * Giao diện MATLAB: Điều khiển trực quan qua GUI (`gui.mlapp`)
 * Phát hiện đối tượng: Xử lý ảnh với OpenCV (`Detectobject.py`)
