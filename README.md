@@ -9,7 +9,7 @@ Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậ
 * Tương tác môi trường (phát hiện và thao tác đối tượng)
 
 **Ý tưởng chính:** Xây dựng hệ thống mô phỏng robot AR2 hoàn chỉnh, kết nối ROS ↔ MATLAB, xử lý hình ảnh từ cảm biến, và điều khiển linh hoạt qua GUI hoặc script Python.
-
+![Demo Robot 6-DOF]([https://drive.google.com/uc?export=view&id=1aBcDeFgHiJkLmN](https://drive.google.com/file/d/1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx/view?usp=drive_link))
 Phù hợp cho: Nghiên cứu học thuật, phát triển ứng dụng robot, và giảng dạy.
 
 ## Demo
