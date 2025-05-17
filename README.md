@@ -27,7 +27,7 @@ Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậ
   <p align="center">Mô hình Assembly trên SolidWork>
 </div>
 
-<div align="center">
+<div align="left">
   <img src="(https://drive.google.com/uc?export=view&id=1m1rPwmgqAXiJfKh5xN3QxK1OqHbtwVgE">
   <p align="center">Mô hình 3D mô phỏng trên Gazebo>
 </div>
