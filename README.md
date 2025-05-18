@@ -36,7 +36,13 @@ Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậ
 ## Demo
 
 **Video mô phỏng** (Gazebo, MoveIt, GUI MATLAB):
-[https://youtube.com/](https://youtube.com/)...
+
+<div align="center">
+  <a href="https://drive.google.com/file/d/1LUDMTG3qU_su9cJLHkTs-3ke6XgP62Lh/view?usp=drive_link">
+    <img src="https://drive.google.com/uc?export=view&id=1tUHnLtR1w7VZUkysx9ip_lGUAy2YfDsR" alt="Video Demo Robot 6DOF">
+  </a>
+  <p>Robot được mô phỏng trong môi trường Gazebo và được điều khiển qua GUI</p>
+</div>
 
 
 
