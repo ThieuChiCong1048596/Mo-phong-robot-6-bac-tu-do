@@ -63,32 +63,35 @@ Please refer to the official guide at: https://wiki.ros.org/noetic/Installation/
 Or see detailed instructions in Vietnamese at: https://robodev.blog/cai-dat-ros-noetic
 
 2. Install MoveIt
-
+```bash
 sudo apt install ros-noetic-moveit
-
+```
 3. Create ROS Workspace
-
+```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+```
 
 4. Clone Repository
-
+```bash
 cd ~/catkin_ws/src
 git clone https://github.com/ThieuChiCong1048596/Mo-phong-robot-6-bac-tu-do.git
 cd ../
 catkin_make
 source devel/setup.bash
+```
 
 5. Install MATLAB
 
 * Install version R2024a or later
 * Install ROS Toolbox via Add-Ons
 * Verify connection:
-
+```bash
 rosinit('http://<ubuntu-ip>:11311')
+```
 
 ## Usage Instructions
 
@@ -119,7 +122,7 @@ Or run the executable file:
 
 ## Project Structure
 
-text
+```plaintext
 Mo-phong-robot-6-bac-tu-do/
 ├── moveit_ws/
 │   └── src/
@@ -140,6 +143,7 @@ Mo-phong-robot-6-bac-tu-do/
 ├── .gitattributes
 ├── README.md
 ├── LICENSE
+```
 
 ## Documentation & Design
 
@@ -158,15 +162,24 @@ Mo-phong-robot-6-bac-tu-do/
 ## Notes
 
 * MATLAB and ROS master must be on the same LAN or run on localhost
-* Start simulation in order: Gazebo → ROS nodes → MATLAB GUI
-* Common errors:
+* Start simulation in order:
+1. **MoveIt** – Launch planning and robot configuration  
+2. **Gazebo Simulation** – Start the simulation environment  
+3. **ROS Functional Nodes** – Run custom ROS nodes (e.g., IK, detection)  
+4. **MATLAB GUI** – Connect and control via graphical interface  
+
+⚠️ **Tip**:  
+Watch out for common issues with:
+- **Networking** (ROS master URI mismatch)
+- **TF Tree Conflicts**
+- **Image Topics** not published or subscribed correctly
 
 ## Author
 
-* Name: Thiều Chí Công
-* Email: thieuchicong1048596@gmail.com
-* GitHub: ThieuChiCong1048596
+**Name**: Thiều Chí Công  
+**Email**: [thieuchicong1048596@gmail.com](mailto:thieuchicong1048596@gmail.com)  
+**GitHub**: [ThieuChiCong1048596](https://github.com/ThieuChiCong1048596)
 
 ## License
 
-The project is released under the MIT License (./LICENSE)
+This project is licensed under the **MIT License**.
