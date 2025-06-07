@@ -119,6 +119,7 @@ Or run the executable file:
 
 ## Project Structure
 
+text
 Mo-phong-robot-6-bac-tu-do/
 ├── moveit_ws/
 │   └── src/
