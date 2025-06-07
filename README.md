@@ -1,143 +1,124 @@
-# Mô phỏng Robot 6 Bậc Tự Do (6-DOF)
 
-## Tổng Quan
+# 6-DOF Robot Simulation
 
-Dự án cung cấp một môi trường mô phỏng robot công nghiệp 6 bậc tự do (6-DOF) sử dụng **ROS Noetic**, **MoveIt**, **Gazebo** và **giao diện MATLAB GUI**. Hệ thống tích hợp mô hình URDF từ SolidWorks, hỗ trợ:
+## Overview
 
-* Lập kế hoạch chuyển động (trajectory planning)
-* Điều khiển robot (động học thuận/nghịch)
-* Tương tác môi trường (phát hiện và thao tác đối tượng)
+The project provides a simulation environment for a 6-degree-of-freedom (6-DOF) industrial robot using ROS Noetic, MoveIt, Gazebo, and MATLAB GUI interface. The system integrates a URDF model from SolidWorks, supporting:
 
-**Ý tưởng chính:** Xây dựng hệ thống mô phỏng robot 6 bậc tự do hoàn chỉnh, kết nối ROS ↔ MATLAB, xử lý hình ảnh từ cảm biến, và điều khiển linh hoạt qua GUI hoặc script Python.
+* Motion planning (trajectory planning)
+* Robot control (forward/inverse kinematics)
+* Environment interaction (object detection and manipulation)
 
-## Tính Năng
+Main idea: Build a complete 6-DOF robot simulation system, connecting ROS ↔ MATLAB, processing images from sensors, and enabling flexible control via GUI or Python scripts.
 
-* Mô phỏng robot 6 bậc tự do: chuyển file file Assembly của SolidWork sang file URDF + Gazebo(ROS) với mô phỏng các khớp chính xác
-* Lập kế hoạch chuyển động: MoveIt, điều khiển qua Python (`IK_solver.py`, `Cartesian_path.py`)
-* Giao diện MATLAB: Điều khiển trực quan qua GUI (`gui.mlapp`)
-* Phát hiện đối tượng: Xử lý ảnh với OpenCV (`Detectobject.py`)
-* Tương tác môi trường: Tạo vật thể trong Gazebo (`node_spawn_box_models_in_gazebo.py`)
-* Điều khiển đầu cuối: Theo dõi và điều chỉnh End-Effector (`EE_tracker.py`, `node_set_predefined_pose.py`)
-* Thiết kế 3D: Mô hình SolidWorks đầy đủ
+## Features
 
-
+* 6-DOF robot simulation: Convert SolidWorks Assembly files to URDF + Gazebo (ROS) with accurate joint simulation
+* Motion planning: MoveIt, controlled via Python (IK_solver.py, Cartesian_path.py)
+* MATLAB interface: Intuitive control via GUI (gui.mlapp)
+* Object detection: Image processing with OpenCV (Detectobject.py)
+* Environment interaction: Spawn objects in Gazebo (node_spawn_box_models_in_gazebo.py)
+* End-effector control: Tracking and adjusting End-Effector (EE_tracker.py, node_set_predefined_pose.py)
+* 3D design: Complete SolidWorks model
 
 <div align="center">
   <img src="https://drive.google.com/uc?export=view&id=1YwCPNcOnOscLRBTUyOEucLvSFvD39UGx">
-  <p align="center">Mô hình Assembly trên SolidWork
+  <p align="center">Assembly Model in SolidWorks
 </div>
 
 <div align="center">
   <img src="https://drive.google.com/uc?export=view&id=1m1rPwmgqAXiJfKh5xN3QxK1OqHbtwVgE">
-  <p align="center">Mô hình 3D mô phỏng trên Gazebo
+  <p align="center">3D Simulation Model in Gazebo
 </div>
-
 
 ## Demo
 
-**Video mô phỏng** :
+Video simulation:
 
 <div align="center">
   <a href="https://drive.google.com/file/d/1LUDMTG3qU_su9cJLHkTs-3ke6XgP62Lh/view?usp=sharing">
     <img src="https://drive.google.com/uc?export=view&id=1uZR9VG9ZMVtvoKd_e9LSbCNrDbY4AIEf" alt="Video Demo Robot 6DOF">
   </a>
-  <p>Robot được mô phỏng trong môi trường Gazebo và được điều khiển qua GUI</p>
+  <p>Robot simulated in Gazebo environment and controlled via GUI</p>
 </div>
 
+## System Requirements
 
-
-## Yêu Cầu Hệ Thống
-
-| Thành phần            | Phiên bản hoặc mô tả                                        |
-| --------------------- | ----------------------------------------------------------  |
-| Hệ điều hành          | Window 10/11 cho Matlab, Ubuntu 20.04 (Focal Fossa) cho ROS |
+| Component             | Version or Description                                      |
+|-----------------------|-------------------------------------------------------------|
+| Operating System      | Windows 10/11 for MATLAB, Ubuntu 20.04 (Focal Fossa) for ROS |
 | ROS                   | Noetic Ninjemys                                             |
 | MoveIt                | 1.1.9                                                       |
 | Gazebo                | 11.x                                                        |
-| MATLAB                | R2024a+ với ROS Toolbox                                     |
-| Phần mềm bổ sung      | Git, Python 3.8+, Catkin tools                              |
-| Phần cứng khuyến nghị | RAM ≥ 8GB (tốt nhất 16GB), CPU ≥ 4 nhân, GPU hỗ trợ OpenGL  |
+| MATLAB                | R2024a+ with ROS Toolbox                                    |
+| Additional Software   | Git, Python 3.8+, Catkin tools                              |
+| Recommended Hardware  | RAM ≥ 8GB (preferably 16GB), CPU ≥ 4 cores, GPU with OpenGL support |
 
-## Cài Đặt
+## Installation
 
-1. **Cài Đặt ROS Noetic**
+1. Install ROS Noetic
 
-Vui lòng tham khảo hướng dẫn chính thức tại:👉 https://wiki.ros.org/noetic/Installation/Ubuntu
+Please refer to the official guide at: https://wiki.ros.org/noetic/Installation/Ubuntu
 
-Hoặc xem hướng dẫn chi tiết bằng tiếng Việt tại:👉 https://robodev.blog/cai-dat-ros-noetic
+Or see detailed instructions in Vietnamese at: https://robodev.blog/cai-dat-ros-noetic
 
-2. **Cài MoveIt**
+2. Install MoveIt
 
-```bash
 sudo apt install ros-noetic-moveit
-```
 
-3. **Tạo ROS Workspace**
+3. Create ROS Workspace
 
-```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-```
 
-4. **Clone Repository**
+4. Clone Repository
 
-```bash
 cd ~/catkin_ws/src
 git clone https://github.com/ThieuChiCong1048596/Mo-phong-robot-6-bac-tu-do.git
 cd ../
 catkin_make
 source devel/setup.bash
-```
 
-5. **Cài MATLAB**
+5. Install MATLAB
 
-* Cài phiên bản R2024a hoặc mới hơn
-* Cài ROS Toolbox qua Add-Ons
-* Kiểm tra kết nối:
+* Install version R2024a or later
+* Install ROS Toolbox via Add-Ons
+* Verify connection:
 
-```matlab
 rosinit('http://<ubuntu-ip>:11311')
-```
 
-## Hướng Dẫn Sử Dụng
+## Usage Instructions
 
-### 1. Khởi động mô phỏng
+### 1. Start Simulation
 
-```bash
 roslaunch moveit_ar2_sim full_ar2_sim.launch
-```
 
-### 2. Chạy các node ROS
+### 2. Run ROS Nodes
 
-| Chức năng                  | Lệnh thực thi                                              |
-| -------------------------- | ---------------------------------------------------------- |
-| Theo dõi End-Effector      | `rosrun moveit_ar2_sim EE_tracker.py`                      |
-| Lập kế hoạch IK            | `rosrun moveit_ar2_sim IK_solver.py`                       |
-| Nội suy đường đi Cartesian | `rosrun moveit_ar2_sim Cartesian_path.py`                  |
-| Phát hiện đối tượng        | `rosrun moveit_ar2_sim Detectobject.py`                    |
-| Hiệu chuẩn vị trí          | `rosrun moveit_ar2_sim Calibrate.py`                       |
-| Sinh vật thể trong Gazebo  | `rosrun moveit_ar2_sim node_spawn_box_models_in_gazebo.py` |
-| Đặt tư thế định sẵn        | `rosrun moveit_ar2_sim node_set_predefined_pose.py`        |
+| Function                   | Command                                                   |
+|----------------------------|-----------------------------------------------------------|
+| End-Effector Tracking      | rosrun moveit_ar2_sim EE_tracker.py                      |
+| IK Planning                | rosrun moveit_ar2_sim IK_solver.py                       |
+| Cartesian Path Interpolation| rosrun moveit_ar2_sim Cartesian_path.py                 |
+| Object Detection           | rosrun moveit_ar2_sim Detectobject.py                    |
+| Position Calibration       | rosrun moveit_ar2_sim Calibrate.py                       |
+| Spawn Objects in Gazebo    | rosrun moveit_ar2_sim node_spawn_box_models_in_gazebo.py |
+| Set Predefined Pose        | rosrun moveit_ar2_sim node_set_predefined_pose.py        |
 
-### 3. Giao diện GUI MATLAB
+### 3. MATLAB GUI Interface
 
-```matlab
 rosinit('http://<ubuntu-ip>:11311')
 run('Robot_6DOF_controller_GUI/gui.mlapp')
-```
 
-Hoặc chạy file thực thi:
+Or run the executable file:
 
-```bash
 ./Robot_6DOF_controller_GUI/for_redistribution/MyAppInstaller_web.exe
-```
 
-## Cấu Trúc Dự Án
+## Project Structure
 
-```text
 Mo-phong-robot-6-bac-tu-do/
 ├── moveit_ws/
 │   └── src/
@@ -158,36 +139,33 @@ Mo-phong-robot-6-bac-tu-do/
 ├── .gitattributes
 ├── README.md
 ├── LICENSE
-```
 
-## Tài Liệu & Thiết Kế
+## Documentation & Design
 
-* File SolidWorks 3D (Giải nén trên Desktop, yêu cầu bản SolidWorks từ 2022 trở lên): (https://drive.google.com/drive/folders/10BUfy0PVBtMiwYveavlsReMv1TZBFfdv?usp=drive_link)
-* GUI Executable (.exe): có trong .zip
+* SolidWorks 3D Files (Extract on Desktop, requires SolidWorks 2022 or later): (https://drive.google.com/drive/folders/10BUfy0PVBtMiwYveavlsReMv1TZBFfdv?usp=drive_link)
+* GUI Executable (.exe): Included in .zip
 
-## Thuật Toán
+## Algorithms
 
-| Tính năng          | Mô tả                               |
-| ------------------ | ----------------------------------- |
-| IK Solver          | Giải inverse kinematics bằng MoveIt |
-| Cartesian Path     | Nội suy tuyến tính trong không gian |
-| Object Detection   | Phát hiện vật thể qua xử lý ảnh     |
-| End-Effector Track | Theo dõi vị trí và hiệu chỉnh       |
+| Feature             | Description                                |
+|---------------------|--------------------------------------------|
+| IK Solver           | Solves inverse kinematics using MoveIt     |
+| Cartesian Path      | Linear interpolation in space              |
+| Object Detection    | Detects objects via image processing       |
+| End-Effector Track  | Tracks and adjusts position                |
 
-## Lưu ý
+## Notes
 
-* MATLAB và ROS master cần cùng mạng LAN hoặc chạy `localhost`
-* Khởi động mô phỏng theo thứ tự: Gazebo → ROS nodes → MATLAB GUI
-* Một số lỗi thường gặp:
+* MATLAB and ROS master must be on the same LAN or run on localhost
+* Start simulation in order: Gazebo → ROS nodes → MATLAB GUI
+* Common errors:
 
+## Author
 
-
-## Tác Giả
-
-* Tên: Thiều Chí Công
-* Email: [thieuchicong1048596@gmail.com](mailto:thieuchicong1048596@gmail.com)
-* GitHub: [ThieuChiCong1048596](https://github.com/ThieuChiCong1048596)
+* Name: Thiều Chí Công
+* Email: thieuchicong1048596@gmail.com
+* GitHub: ThieuChiCong1048596
 
 ## License
 
-Dự án được phát hành theo giấy phép [MIT License](./LICENSE)
+The project is released under the MIT License (./LICENSE)
